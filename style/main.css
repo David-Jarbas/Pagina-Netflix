@@ -1,0 +1,104 @@
+:root{ /*variável em CSS*/
+    --vermelho:#E50914;
+    --preto:#141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*tamanho da caixa/ o atributo "border-box" faz com que os elementos não saiam da caixa*/
+}
+
+/*Elementos base*/
+body{ /*todos os elementos filhos vao herdar os atributos do body*/
+    background: var(--preto);
+    font-family: 'Times New Roman', Times, serif;
+    color:white;
+}
+
+.container {
+    display: flex; /*usado para FlexBox, este atributo coloca todo conteúdo em linha (muita vezes jogando algo para cima)porque ele ativa automaticamente a propriedade "flex-direction: row"*/
+    align-items: center; /*coloca os itens do menu ao centro*/
+    justify-content: space-between; /*a propriedade trabalha de maneira horizontal, neste caso vai colocar espaço entre a tag h1 e o menu de navegação, jogando o menu para a extrema direita*/
+    margin-left: 30px;
+}
+
+.logo { /*h1 netflix*/
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black';
+    font-size: 40px;
+}
+
+.container-2 {
+    margin-left: 15px;
+}
+
+header nav a { /*menu*/
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color:#fff;
+}
+
+/*Filme principal*/
+.filme-principal {
+    font-size: 16px;
+    background: url('../img/vikings2.jpg');
+    height: 700px;
+    background-size: cover; /*especificar exatamente o tamanho que voce quer que a imagem ocupe*/
+    display: flex; /* isso vai colocar os botoes na vertical*/
+    flex-direction: column; /*coloca os botoes na horizontal ocupando as duas extremidades da página*/
+    justify-content: center; /*vai centralizar todo o container no meio da página. quando esta em coluna o justify trabalha de um lado para o outro*/
+    align-items: flex-start; /*vai jogar os botoes para o canto esquerdo novamente*/
+}
+
+.filme-principal, .descricao {
+    margin-bottom: 40px;
+}
+
+.descricao {
+    margin-top: 10px;
+    width: 50%;
+    color: #fff;
+}
+
+.titulo {
+    font-size: 45px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 15%;
+}
+
+.botao {
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover {
+    background-color: white;
+    color:black;
+}
+
+.botao i {
+    margin-right: 5px;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.item {
+    cursor: pointer;
+}
+
